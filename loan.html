@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>LoanAnalysis</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="loan.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="loan">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">House Loan Analysis</h1>
+          <h3>DESCRIPTION :</h3>
+          <br>
+		  <p>
+		  •For safe and secure lending experience, it's important to analyse the past data. <br>
+		  •In this project, I have to build a deep learning model to predict the chance of default for future loans using the historical data. <br>
+		  •As you will see, this dataset is highly imbalanced and includes a lot of features that make this problem more challenging.<br></p>
+		  <br>
+		  <h3>Objective :</h3>
+          <br><p>
+		  •Create a model that predicts whether or not an applicant will be able to repay a loan using historical data.<br>
+          •Performing data preprocessing and build a deep learning prediction model.<br>
+          •Removed the variable which contains null values.<br>
+          •Checking that target varaible has imbalanced data or not.</p><br>
+		  <div class="BD">
+		    <img src="HouseLoan/imbalance.png">
+			<p><b>imbalance Data</b></p>
+		  </div><br>
+		  <p>
+          •By using Oversampling techinque target varibale data are now balanced.</p><br>
+		  <div class="BD">
+		    <img src="HouseLoan/balance.png">
+			<p><b>Balanced Data</b></p>
+		  </div><br>
+		  <p>
+          •Encoding the columns that is required for the model development</p>
+		  <br>
+		  <div class="grid">
+		    <div class="item">
+			  <img src="HouseLoan/1.png">
+			  <p><b>Contract Type</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/2.png">
+			  <p><b>Code Gender</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/3.png">
+			  <p><b>Flag Own Car</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/4.png">
+			  <p><b>Flag Own Realty</b></p>
+			</div>
+			 <div class="item">
+			  <img src="HouseLoan/5.png">
+			  <p><b>Income Type</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/6.png">
+			  <p><b>Education Type</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/7.png">
+			  <p><b>Family Status</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/8.png">
+			  <p><b>Housing Type</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/9.png">
+			  <p><b>Weekday Process</b></p>
+			</div>
+			<div class="item">
+			  <img src="HouseLoan/10.png">
+			  <p><b>Organization Type</b></p>
+			</div>
+		  </div><br>
+		  <p>
+          •For pre-processing MinMaxScaler was used.<br>
+          •After applying EDA and feature engineering,we are now ready to build the predictive models.<br>
+          •For creating deep learning model Keras and Tensorflow will be used.<br>
+          •Calculate area under receiver operating characteristics curve.</p><br>
+		  <div class="BD">
+		   <img src="HouseLoan/ror.png">
+		   <p><b>Loss Validation</b></p>
+		  </div><br>
+		  <p>
+          •Model accuracy is 78%.<br>
+          <div class="BD">
+		   <img src="HouseLoan/CM.png">
+		   <p><b>Confusion Matrix</b></p>
+		  </div>
+		  <br>
+		  <hr>
+		  <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+		  </div>
+		 </header>
+	 </div>
+   <body>
+   <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+   </script>
+</html>

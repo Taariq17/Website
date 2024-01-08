@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <title>Audio</title>
+      <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+      <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+      <link rel="stylesheet" href="audio.css">
+  </head>
+  <body>
+  	<nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+                  <li class="active"><a href="index.html">Home</a></li>
+		  <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+         </nav>
+        <div id="audio">
+            <header>
+              <br>
+              <br>
+              <br>
+              <h1 style="text-align:center">Audio Classification</h1>
+              <h3>DESCRIPTION</h3>
+              <br>
+              <p>
+              • In this model the audio was classfied using Convolution Neural Network algorithm.<br/>
+              • PUBG game audio was used as a datasets to classify the sound based on object detection using TensorFlow coco model (ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8)..<br/>
+              </p>
+              <br>
+              <h3>METHODOLOGY</h3>
+              <br>
+              <img src="audio/Audioflowchart.jpg" alt="No Image" class="abtimg">
+              <br>
+              <h3>PRE-PROCESSING</h3>
+              <p>
+              • PUBG game audio was recorded in mp3 format and then converted into wav format for the purpose of converting the audio into mel-spectrogram frequency image.<br/>
+              • <b>Librosa</b> and <b>SciPy</b> both is a open source libraries supports wav file for both read and write operation but it’s not feasible in mp3 format.<br/>
+              • By using Librosa, Matplotlib and SciPy library, we were able to extract the Mel-spectrogram and save it as images.<br/>
+              </p>
+              <br>
+              <h3> MEL-SPECTROGRAM OUTPUT </h3>
+              <div class="grid">
+                 <div class="op">
+                   <img src="audio/Gunchange.jpg">
+                   <h5>Gun Change Audio</h5>
+                 </div>
+                 <div class="op">
+                   <img src="audio/Gunshot.jpg">
+                   <h5>Gun Shot Audio</h5>
+                 </div>
+                 <div class="op">
+                   <img src="audio/M416GL.jpg">
+                   <h5>M416 Gun Load Audio</h5>
+                 </div>
+                 <div class="op">
+                   <img src="audio/M762GL.jpg">
+                   <h5>M762 Gun Load Audio</h5>
+                 </div>
+                 <div class="op">
+                   <img src="audio/PistolGL.jpg">
+                   <h5>Pistol Gun Load Audio</h5>
+                 </div>
+              </div>
+              <br>
+              <h3>DATA AUGUMENTATION </h3><p>
+              • Data augmentation is labeling the image for classification.<br/>
+              • LabelImg tool was used for labeling the image which will generate a XML file for bound box annotation.<br/>
+              • The XML code are generate from labelImg tool for labeling the images and it’s divided into two part: One is for training and other is for testing.<br/></p>
+              <br>
+              <h3>MODEL TRAINING AND TESTING</h3>
+              <p>
+              • Model was trained using Tensorflow coco <b>ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8</b> model.<br/>
+              </p>
+              <br>
+              <h3>MODEL OUTPUT</h3>
+              <br>
+              <div class="grid2">
+               <div class="mop">
+                 <img src="audio/GLOP.jpg">
+                 <h5>Gun Change Output</h5>
+               </div>
+               <div class="mop">
+                 <img src="audio/GSOP.jpg">
+                 <h5>Gun Shot Output</h5>
+               </div>
+               <div class="mop">
+                 <img src="audio/M416GLOP.jpg">
+                 <h5>M416 Gun Load Output</h5>
+               </div>
+               <div class="mop">
+                 <img src="audio/M762GLOP.jpg">
+                 <h5>M762 Gun Load Output</h5>
+               </div>
+               <div class="mop">
+                 <img src="audio/PistolGLOP.jpg">
+                 <h5>Pistol Gun Load Output</h5>
+               </div>
+              </div>
+            </header>
+           </div>
+           <br>
+           <hr>
+           <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+           </div> 
+  </body>
+  <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+   </script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>TopicAnalysis</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="topic.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="topic">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">Amazon Topic Analysis</h1>
+          <h3>DESCRIPTION :</h3>
+          <br>
+		  <p>
+		  •Help a leading mobile brand understand the voice of the customer by analysing the reviews of their product on Amazon and the topics that customers are talking about. <br>
+		  •I will perform topic modeling on specific parts of speech.<br>
+		  •I’ll finally interpret the emerging topics.<br>
+		  •A popular mobile phone brand, Lenovo has launched their budget smartphone in the Indian market.<br>
+		  •The client wants to understand the VOC (voice of the customer) on the product.<br> 
+		  •This will be useful to not just evaluate the current product, but to also get some direction for developing the product pipeline. <br>
+		  •The client is particularly interested in the different aspects that customers care about.<br>
+		  •Product reviews by customers on a leading e-commerce site should provide a good view.</p><br>
+		  <h3>Analysis to be done: </h3><br>
+		  <p>
+		  •POS tagging, topic modelling using LDA, and topic interpretation Content<br>
+          •The sentiment against the review (4,5-star reviews are positive, 1,2 are negative)</p><br>
+		  <h3>Steps to perform:</h3><br>
+		  <p>
+		  •Discover the topics in the reviews and present it to business in a consumable format.<br>
+		  •Employ techniques in syntactic processing and topic modelling.<br>
+		  •Perform specific clean up, POS tagging, and restricting to relevant POS tags, then, perform topic modelling using LDA.<br>
+		  •Finally, give business-friendly names to the topics and make a table for business.<br>
+		  •Pandas library is used for reading CSV files.<br>
+		  •NLTK library is used for NLP model development.</p><br>
+		  <h3>Data Pre-Processing:</h3><br>
+		  <p>
+		  •Frist replacing or dropping the null values.<br>
+		  •Converting the review to lower cases.</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/lowcase.png">
+		  </div><br>
+		  <p>
+		  •Removing Non-Alpha data(Digits, Punctuations, and Diacritics)in reviews text.</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/removewords.png">
+		  </div><br>
+		  <p>
+		  •Remove whitespace in reviews text.<br>
+		  •Tokenize the words using nltk.word_tokenize</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/token.png">
+		  </div><br>
+		  <p>Remove unnecessary words in reviews text.</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/unnecessword.png">
+		  </div><br>
+		  <p>
+		  •Using WordNetLemmatizer reviews text are lemmatized.</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/Lemm.png">
+		  </div><br>
+		  <p>
+		  •Extracting only noun in review text.</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/noun.png">
+		  </div><br>
+		  <p>
+		  •Created a topic model using LDA on the cleaned-up data with 12 topics.<br>
+		  •Plotting coherence score.</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/NumberofTopics.png">
+		  </div><br>
+		  <p>
+		  •Most talked topics in reviews</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/MostTalkedTopics.png">
+		    <p><b>Most Talked Topics</b></p>
+		  </div><br>
+		  <p>
+		  •From above graph we can say that most of customers had issues with Battery of mobile</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/ComicReviews.png">
+			<p><b>Count plot</b></p>
+		  </div><br>
+		  <p>
+		  •From above graph we can say that most of customers had combined issues with,</p><br>
+		  <p style="text-align:center">
+                         1.Heating issue & Battery<br>
+                         2.Camera, Sound & Battery<br>
+                         3.turbo charger & Battery</p><br>
+		  <p>				 
+		  •Extracting reviews of 5 topic(review of battery)</p><br>
+		  <div class="BD">
+		    <img src="TopicAnalysis/topicname.png">
+		  </div><br>
+		  <hr>
+		  <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+		  </div>
+		</header>
+	 </div>
+  </body>
+  <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+  </script>
+</html>

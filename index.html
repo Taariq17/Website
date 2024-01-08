@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+	<link rel="stylesheet" href="main.css">
+   </head>
+   <body>
+   	<nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="#pro">Home</a></li>
+   		    <li class="active"><a href="#abt">About</a></li>
+		    <li class="active"><a href="#Proj">Project</a></li>
+		    <li class="active"><a href="#contact">Contact</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+          </nav>  
+   
+   <div id="pro">
+      <header>
+         <br>
+         <br>	
+         <br>
+         <br>
+         <br>	
+         <br>
+         <br>
+         <h1><b>Hi! I'm Taariq Dawood Buhari</b></h1>
+         <h5>Data Scientist & AI Model Developer</h5>
+         <br>	
+         <br>
+         <br>
+         <br>	
+         <br>
+      </header>
+   </div>
+   <div id="abt">
+    <header>
+       <br>
+       <br>	
+       <br>
+       <img src="img/DP5.jpeg" alt="no image" class="abtimg">
+       <br>
+       <br>
+       <p>Taariq is motivated by the conviction that data may be used to generate more effective decisions.
+       <br>He aims to be able to make it simpler for individuals to comprehend programming and effectively utilise data.
+       <br>Taariq fosters the use of open-source software and data.
+       <br>Taariq uses Python frequently, but he is also excellent in R and SQL.</p>
+       <br>
+       <p>Taariq has worked at Bioluminuex, a research and development company, 
+       <br>where he worked on health-related meta-data and developed predictive modelling to forecast health vitals. 
+       <br>Taariq is a computer science engineering graduate who completed his master's programme in Data Science and 
+       <br>AI on Simplilearn,where he explored various facets of data science, data visualisation, and user research.<br/><br/></p>
+    </header>
+   </div>
+   <div id=Proj>
+     <header>
+      <br>
+       <h1>Projects</h1>
+
+       <div class="wrapper">
+          <div class="container">
+            <div class="box">  
+              <img src="img/ElderFall.jpg">
+              <h3>Elder Fall Prediction</h3>
+              <p>Main objective of this projects is to predict the fall position of the elder</p>
+              <a href="fall.html" class="btn"><b>Read More</b></a>
+           </div> 
+           <div class="box">  
+              <img src="img/audio.jpg">
+              <h3>Audio Classification</h3>
+              <p>Main aim of this projects is to classify the sound through mel-spectrogram image</p>
+              <a href="audio.html" class="btn"><b>Read More</b></a>
+           </div> 
+           <div class="box">  
+              <img src="img/amazon.jpg">
+              <h3>Amazon E-Commerce Analysis</h3>
+              <p>Main objective of this project is to forecast customer sentiment analysis</p>
+              <a href="ecommerce.html" class="btn"><b>Read More</b></a>
+           </div>
+            <div class="box">  
+              <br>
+              <br>
+              <br>
+              <h3>For More Projects</h3>
+              <a href="proj.html" class="btn"><b>Click Here</b></a>
+           </div>
+         </div>
+       </div>
+    </header>
+   </div>
+   <hr/>
+   <div id="contact">
+     <header>
+        <h1>Get in Touch</h1>
+        <div class="logo-container">
+           <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+           <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+           <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+        </div>
+     </header>
+   </div>	
+   </body>
+   <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+   </script>
+</html>

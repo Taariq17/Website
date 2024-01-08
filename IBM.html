@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>IBMAttritionAnalysis</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="IBM.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="ibm">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">IBM Attrition Analysis</h1>
+          <h3>DESCRIPTION :</h3>
+          <br>
+		  <p>
+		  •IBM is an American MNC operating in around 170 countries with major business vertical as computing, software, and hardware.<br>
+		  •Attrition is a major risk to service-providing organizations where trained and experienced people are the assets of the company.<br>
+		  •The organization would like to identify the factors which influence the attrition of employees.</p><br>
+		  <h3>Dataset Description:</h3>
+		  <p style="text-align:center">
+		  •	Age: Age of employee<br>
+		  •	Attrition: Employee attrition status<br>
+          •	Department: Department of work<br>
+          •	DistanceFromHome<br>
+          •	Education: 1-Below College; 2- College; 3-Bachelor; 4-Master; 5-Doctor;<br>
+          •	EducationField<br>
+          •	EnvironmentSatisfaction: 1-Low; 2-Medium; 3-High; 4-Very High;<br>
+          •	JobSatisfaction: 1-Low; 2-Medium; 3-High; 4-Very High;<br>
+          •	MaritalStatus<br>
+          •	MonthlyIncome<br>
+          •	NumCompaniesWorked: Number of companies worked prior to IBM<br>
+          •	WorkLifeBalance: 1-Bad; 2-Good; 3-Better; 4-Best;<br>
+          •	YearsAtCompany: Current years of service in IBM</p><br>
+          <h3>Analysis Task:</h3><br>
+		  <p>
+		  •Import attrition dataset and import libraries such as pandas, matplotlib.pyplot, numpy, and seaborn.</p><br>
+		  <h3>Exploratory data analysis:</h3><br>
+		  <p>
+		  •Find the age distribution of employees in IBM</p><br>
+		  <div class="BD">
+		    <img src="IBM/AgeDistrub.png">
+			<p><b>Age Distribution of Employees</b></p>
+		  </div><br>
+		  <p>
+		  •Exploring attrition by age</p><br>
+		  <div class="BD">
+		    <img src="IBM/AttritionAge.png">
+		  </div><br>
+		  <p>
+		  •Explore data for Left employees</p><br>
+		  <div class="BD">
+		    <img src="IBM/AttritionBreakdown.png">
+			<p><b> Attrition Breakdown</b></p>
+		  </div><br>
+		  <p>
+		  •Find out the distribution of employees by the education field</p><br>
+		  <div class="BD">
+		    <img src="IBM/EduDistrub.png">
+			<p><b>Education Distribution</b></p>
+		  </div><br>
+		  <p>
+		  •Give a bar chart for the number of married and unmarried employees</p></br>
+		  <div class="BD">
+		    <img src="IBM/MartialStatus.png">
+			<p><b>Martial Status</b></p>
+		  </div><br>
+		  <p>
+		  •Build up a logistic regression model to predict which employees are likely to attrite.<br>
+		  •Logistic Regression model accuracy is 84% and ROC score is 65%.</p><br>
+		  <div class="BD">
+		    <img src="IBM/CM.png">
+			<p><b>Confusion Matrix</b></p>
+		  </div><br>
+		  <hr>
+		  <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+		  </div>
+		</header>
+	 </div>
+   </body>
+   <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+   </script>
+</html>

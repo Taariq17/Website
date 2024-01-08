@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>ComplaintAnalysis</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="com.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="com">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">Comcast Telcom Customer Complaint Analysis</h1>
+          <h3>DESCRIPTION :</h3>
+          <br>
+		  <p>
+		   •Comcast is an American global telecommunication company. <br>
+		   •The firm has been providing terrible customer service.<br>
+		   •They continue to fall short despite repeated promises to improve. <br>
+		   •Only last month (October 2016) the authority fined them a $2.3 million, after receiving over 1000 consumer complaints.<br>
+           •The existing database will serve as a repository of public customer complaints filed against Comcast.<br>
+		   •It will help to pin down what is wrong with Comcast's customer service.</p>
+		   <br>
+		  <h3>Dataset Description :</h3><br>
+		  <p style="text-align:center">
+		  •	Ticket #: Ticket number assigned to each complaint<br>
+          •	Customer Complaint: Description of complaint<br>
+          •	Date: Date of complaint<br>
+          •	Time: Time of complaint<br>
+          •	Received Via: Mode of communication of the complaint<br>
+          •	City: Customer city<br>
+          •	State: Customer state<br>
+          •	Zipcode: Customer zip<br>
+          •	Status: Status of complaint<br>
+          •	Filing on behalf of someone</p><br>
+		  <h3>Analysis Task:</h3><br>
+		  <p>
+		   •To perform the tasks, I used different Python libraries such as NumPy, SciPy, Pandas, scikit-learn, matplotlib, and BeautifulSoup.<br>
+           •Trend chart for the number of complaints at monthly and daily granularity levels.<br></p>
+		   <br>
+		   <div class="BD">
+		    <img src="Comcast/MonthComplaint.png">
+			<p><b>Complaints Monthly</p>
+		   </div><br>
+		   <div class="BD">
+		     <img src="Comcast/DayMonthComp.png">
+			 <p><b>Daily Granularity Levels</b></p>
+		   </div><br>
+		   <p>
+		   •Finding which complaint types are maximum i.e., around internet, network issues, or across any other domains.</p><br>
+		   <div class="BD">
+		    <img src="Comcast/ComplaintType.png">
+			<p><b>Complaint Types</b></p>
+		   </div><br>
+		   •Create a new categorical variable with value as Open and Closed. Open & Pending is to be categorized as Open and Closed & Solved is to be categorized as Closed.</p><br>
+		   <div class="BD">
+		    <img src="Comcast/StatusComplaint.png">
+			<p><b>Complaint Status</b></p>
+		   </div><br>
+		   <div class="BD">
+		    <img src="Comcast/FinalStatus.png">
+			<p><b>Final Status</b></p>
+		   </div><br>
+		   <p>
+		   •Provide state wise status of complaints in a stacked bar chart. Use the categorized variable from Q3.</p><br>
+		   <div class="BD">
+		    <img src="Comcast/StateComplaint.png">
+			<p><b>Complaint Status with different state</b></p>
+		   </div><br>
+		   <p>
+		   •Finding which state has the maximum complaints</p><br>
+		   <div class="BD">
+		    <img src="Comcast/Statewisecomplaint.png">
+			<p><b>States with respective complaint numbers</b></p>
+		   </div><br>
+		   <p>
+		   •Solved complaint percentage is 76.5.<br>
+		   •Unsolved complaint percentage is 23.25.<br>
+		   •Plotting State Wise Complaint</p><br>
+		   <div class="BD">
+		    <img src="Comcast/Top10complaint.png">
+			<p><b>Top 10 Complaint States</p>
+		   </div><br>
+		   <p>
+		   •Finding Top 30 states with complaints lodged on behalf of someone</p><br>
+		   <div class="BD">
+		    <img src="Comcast/Complaint_behalf.png">
+		   </div><br>
+		   <p>
+		   •Finding Top 30 states with complaints lodged by themselves</p><br>
+		   <div class="BD">
+		    <img src="Comcast/Complaint_themseleves.png">
+		   </div>
+		</header>
+		<br>
+		<hr>
+		<div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+		</div>
+	 </div>
+  </body>
+  <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+   </script>
+</html>

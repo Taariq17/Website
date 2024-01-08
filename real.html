@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>RealEstate</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="real.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="real">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">Real Estate Analysis</h1>
+          <h3>DESCRIPTION :</h3>
+          <br>
+		  <p>
+		  •	A banking institution requires actionable insights into mortgage-backed securities, geographic business investment, and real estate analysis.<br> 
+          •	The mortgage bank would like to identify potential monthly mortgage expenses for each region based on monthly family income and rental of the real estate.<br>
+          •	A statistical model needs to be created to predict the potential demand in dollars amount of loan for each of the region in the USA. Also, there is a need to create a dashboard which would refresh periodically post data retrieval from the agencies.<br>
+          •	The dashboard must demonstrate relationships and trends for the key metrics as follows: number of loans, average rental income, monthly mortgage and owner’s cost, family income vs mortgage cost comparison across different regions. The metrics described here do not limit the dashboard to these few.<br>
+		  </p>
+		  <br>
+		  <h3>Dataset Description:</h3><p>
+		  • <b>Second mortgage</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Households with a second mortgage statistics<br>
+          • <b>Home  equity</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Households with a home equity loan statistic<br>
+          • <b>Debt</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Households with any type of debt statistics<br>
+          • <b>Mortgage Costs</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Statistics regarding mortgage payments, home equity loans, utilities, and property taxes<br>
+          • <b>Home Owner Costs</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Sum of utilities, and property taxes statistics<br>
+          • <b>Gross Rent</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Contract rent plus the estimated average monthly cost of utility features<br>
+          • <b>High school Graduation</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: High school graduation statistics<br>
+          • <b>Population Demographics</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      :	Population demographics statistics<br>
+          • <b>Age Demographics</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Age demographic statistics<br>
+          • <b>Household Income</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Total income of people residing in the household<br>
+          • <b>Family Income</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Total income of people related to the householder<br>
+          </p><br>
+		  <h3>Analysis Task:</h3>
+		  <p>
+		  • Importing pandas, numpy, seaborn, matplotlib.pyplot, seaborn libraries for analysis task.<br>
+		  • Figuring out the primary key and looking for the requirement of indexing.</p><br>
+		  <h3>Exploratory Data Analysis:</h3><p>
+		  • Explore the top 2,500 locations where the percentage of households with a second mortgage is the highest and percent ownership is above 10 percent.<br>
+		  • Visualize using geo-map and keeping the upper limit for the percent of households with a second mortgage to 50 percent<br>
+		  • Use the following bad debt equation: Bad Debt = P (Second Mortgage ∩ Home Equity Loan) Bad Debt = second_mortgage + home_equity - home_equity_second_mortgage.<br>
+		  </p>
+		  <br>
+		  <div class="BD">
+		    <img src="RealEstate/PieChartDebt.png">
+			<p><b>Pie Charts to show overall debt and bad debt</b></p>
+		  </div><br>
+		  <p>
+		  • Create Box and whisker plot and analyze the distribution for 2nd mortgage, home equity, good debt, and bad debt for different cities<br></p>
+		  <br>
+		   <div class="grid">
+		    <div class="item">
+			  <img src="RealEstate/MortageDistTop10city.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item">
+			  <img src="RealEstate/EquityDIstTop10city.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item">
+			  <img src="RealEstate/DebtDistTop10City.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item">
+			  <img src="RealEstate/BadDebtDistTop10city.png">
+			  <p><b></b></p>
+			</div>
+		   </div>
+		   <br><p>
+		  •Created a collated income distribution chart for family income, house hold income, and remaining income</p>
+		  <br>
+		  <div class="grid">
+		    <div class="item">
+			  <img src="RealEstate/FamIncome.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item">
+			  <img src="RealEstate/HousIncome.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item">
+			  <img src="RealEstate/RemainIncome.png">
+			  <p><b></b></p>
+			</div>
+		   </div>
+		   <br>
+		   <div class="BD">
+		    <img src="RealEstate/CollatedIncome.png">
+			<p><b>Collated Income Distribution Chart</b></p>
+		   </div><br>
+		  <p>
+		  •Performed EDA and came out with insights into population density and age. I have to derive new fields, and I have to make sure that the weight averages are accurate for measurements.<br></p>
+		  <br>
+		  <div class="BD">
+		   <img src="RealEstate/Dense.png">
+		   <p><b>Density Charts</b></p>
+		  </div><br>
+		  <div class="BD">
+		   <img src="RealEstate/box.png">
+		   <p><b>Box plot</b></p>
+		  </div><br>
+		  <p>
+		  •Used pop and ALand variables to create a new field called population density</p><br>
+		  <div class="BD">
+		   <img src="RealEstate/popdens.png">
+		   <p><b>Population Density</b></p>
+		  </div><br>
+		  <p>
+		  •Used male_age_median, female_age_median, male_pop, and female_pop to create a new field called median age<br>
+		  •Visualize the findings using appropriate chart type<br>
+		  <div class="BD">
+		   <img src="RealEstate/median.png">
+		   <p><b>Median Chart</b></p>
+		  </div><br>
+		  <p>
+		  •Age of population is mostly between 20 and 60<br>
+		  •Majority are of age around 40<br>
+		  •Median age distribution has a gaussian distribution<br>
+		  •Some right skewness is noticed</p><br>
+		  <div class="BD">
+		    <img src="RealEstate/PopDensity.png">
+			<p><b>Population density with median age</b></p>
+		  </div><br>
+		  <p>
+		  •Analyze the married, separated, and divorced population for these population brackets<br>
+		  •Visualize using appropriate chart type<br>
+		  •To ease the visulaize we are splitting states into 4 part which means there are 52 unique states and we are divding 52 states by 4.So, one part of the splitting will contain 13 states.<br>
+		  </p>
+		  <br>
+		  <div class="grid2">
+		    <div class="item2">
+			  <img src="RealEstate/MarriedMale.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/MarriedMale2.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/MarriedMale3.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/MarriedMale4.png">
+			  <p><b></b></p>
+			</div>
+		  </div>
+		  <br><p>
+		  •Ohio & Georgia have Married Male KIDS</p>
+		  <br>
+		  <div class="grid2">
+		    <div class="item2">
+			  <img src="RealEstate/MarriedFemale.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/MarriedFemale2.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/MarriedFemale3.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/MarriedFemale4.png">
+			  <p><b></b></p>
+			</div>
+		  </div>
+		  <br><p>
+		  •Except NewYork no other states has youth</p>
+		  <br>
+		  <div class="grid2">
+		    <div class="item2">
+			  <img src="RealEstate/SeperatedMale.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/SeperatedMale2.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/SeperatedMale3.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/SeperatedMale4.png">
+			  <p><b></b></p>
+			</div>
+		  </div>
+		  <br><p>
+		  •Tennessee has Highest youth separated in 1st part, Virgina Has highest youth seperated in 2nd part and Connecticut has highest youth seperated in 3rd Part.</p><br>
+		  <div class="grid2">
+		    <div class="item2">
+			  <img src="RealEstate/SeperateFemale.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/SeperateFemale2.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/SeperateFemale3.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/seperateFemale4.png">
+			  <p><b></b></p>
+			</div>
+		  </div>
+		  <br><p>
+		  •Except for Newyork, No other state has Separated Female Youth population Tennessee has the Highest Separated Female Senior population</p><br>
+		  <div class="grid2">
+		    <div class="item2">
+			  <img src="RealEstate/DivorcedMale.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/DivorcedMale2.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/DivorcedMale3.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/DivorcedMale4.png">
+			  <p><b></b></p>
+			</div>
+		  </div>
+		  <br><p>
+		  •Ohio has Largest number of Divorced Male KIDS.<br>
+          •Missouri & Connecticut has Largest number of Divorced Male YOUTH.<br>
+          •Maine, Indiana & Oklahoma has Largest number of Divorced Male YOUNG ADULTS.<br>
+          •Arkansas, Maine, Neveda, Indiana & Oklahoma has Largest number of Divorced Male ADULTS.<br>
+          •Louisiana, OKlahoma & Montana has Largest number of Divorced Male SENIORS</p><br>
+          <div class="grid2">
+		    <div class="item2">
+			  <img src="RealEstate/DivorcedFemale.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/DivorcedFemale2.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/DivorcedFemale3.png">
+			  <p><b></b></p>
+			</div>
+			<div class="item2">
+			  <img src="RealEstate/DivorcedFemale4.png">
+			  <p><b></b></p>
+			</div>
+		  </div>
+		  <br><p>		  
+		  •Newyork is the only state that has Divorced Female YOUTH.<br>
+          •Maine has Largest number of Divorced Female YOUNG ADULTS.<br>
+          •Maine has Largest number of Divorced Female ADULTS.<br>
+          •Montana has Largest number of Divorced Female SENIOR</p><br>
+		  <p>Perform correlation analysis for all the relevant variables by creating a heatmap</p>
+		  <br>
+		  <div class="BD">
+		    <img src="RealEstate/Corr.png">
+			<p><b>Correlation Matrix</b></p>
+		  </div><br>
+		  <p>
+		  •High positive correaltion is noticed between pop, male_pop and female_pop<br>
+		  •High positive correaltion is noticed between rent_mean,hi_mean, family_mean,hc_mean</p>
+		  <br>
+		  <h3>Data Pre-processing:</h3><p>
+		  •The economic multivariate data has a significant number of measured variables.<br>
+		  •The goal is to find where the measured variables depend on a number of smaller unobserved common factors or latent variables.<br> 
+		  •Each variable is assumed to be dependent upon a linear combination of the common factors, and the coefficients are known as loadings.<br> 
+		  •Each measured variable also includes a component due to independent random variability, known as “specific variance” because it is specific to one variable.<br> 
+		  •Obtain the common factors and then plot the loadings.<br> 
+		  •Use factor analysis to find latent variables in our dataset and gain insight into the linear relationships in the data.<br>
+		  •Following are the list of latent variables:</p><br>
+		  <p style="text-align:center">
+                               • Highschool graduation rates<br>
+                               • Median population age<br>
+                               • Second mortgage statistics<br>
+                               • Percent own<br>
+                               • Bad debt expense</p><br>
+         <p> 		
+		  •Chi-Square and P-Value is 9045268.678767936, 0.0<br>
+		  •Kaiser–Meyer–Olkin value is 0.21258179885097275</p><br>
+		  <div class="BD">
+		    <img src="RealEstate/Screeplot.png">
+			<p><b>Plotting Eigen Values with Factor Values</b></p>
+		  </div><br>
+		  <p>
+		  • Highschool graduation rates</p><br>
+		  <p style="text-align:center">
+                     • Median population age<br>
+                     • Second mortgage statistics<br>
+                     • Percent own<br>
+                     • Bad debt expense</p><br>
+		  <div class="BD">
+		   <img src="RealEstate/Task3.png">
+		  </div><br>
+		  <h3>Data Modeling :</h3><p>
+		  •Build a linear Regression model to predict the total monthly expenditure for home mortgages loan.</p><br>
+		  <p style="text-align:center">
+		  •Mean Absolute Error is 43.67<br>
+          •Mean Squared Error is 4673.49<br>
+          •Root Mean Squared Error is 68.36<br>
+          •R2 Score is 0.99</p><br>
+		  <p>
+          •Regression Model with all dependent numeric variables at Nation level is giving R SQUARED metric of 99%. So skipping state level Regression Model<br>
+          •Run another model at State level. There are 52 states in USA<br>
+		  •STATEID - 1</p><br>
+		  <p style="text-align:center">
+            •Mean Absolute Error:11389503548.48<br>
+            •Mean Squared Error:2.0908859553935737e+20<br>
+            •Root Mean Squared Error:14459896110.95<br>
+            •R2 Score:-410429821366382.56</p><br>
+		<p>	
+          •STATEID - 20</p><br>
+		  <p style="text-align:center">
+            •Mean Absolute Error:246.6
+            •Mean Squared Error:84714.13
+            •Root Mean Squared Error:291.06
+            •R2 Score:0.63</p><br>
+          <p>
+		  •STATEID - 45</p><br>
+		  <p style="text-align:center">
+            •Mean Absolute Error:8822908571370.76<br>
+            •Mean Squared Error:1.553802280528196e+26<br>
+            •Root Mean Squared Error:12465160570679.37<br>
+            •R2 Score:-6.443994385547235e+20</p><br>
+		<p>	
+          •Ensure Multi-collinearity does not exist in dependent variables<br>
+		  •Dropped MultiCollinear variables and ran the Regression Model</p><br>
+		 <p style="text-align:center">
+		     •Mean Absolute Error:44.0<br>
+             •Mean Squared Error:4787.23<br>
+             •Root Mean Squared Error:69.19<br>
+             •R2 Score:0.99</p><br>
+		  <p>
+          •We have achieved an R Squared value of 99% which is pretty close to 1.</p><br>
+		  <hr>
+		  <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+		  </div>
+		 </header>
+	 </div>
+  </body>
+  <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+   </script>
+  </html>
+  

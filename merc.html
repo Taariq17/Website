@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>MercedesAnalysis</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="merc.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="merc">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">Analysis of Mercedes-Benz's Greener Manfacturing Test Bench</h1>
+          <h3>DESCRIPTION :</h3>
+          <br>
+		  <p>
+		  •Reduce the time a Mercedes-Benz spends on the test bench.</p><br>
+		  <h4>Problem Statement Scenario:</h4><br>
+		  <p>
+		  •Since the first automobile, the Benz Patent Motor Car in 1886, Mercedes-Benz has stood for important automotive innovations. <br>
+		  •These include the passenger safety cell with a crumple zone, the airbag, and intelligent assistance systems. <br>
+		  •Mercedes-Benz applies for nearly 2000 patents per year, making the brand the European leader among premium car makers. <br>
+		  •With a huge selection of features and options, customers can choose the customized Mercedes-Benz of their dreams.<br>
+		  •To ensure the safety and reliability of every unique car configuration before they hit the road, the company’s engineers have developed a robust testing system. <br>
+		  •As one of the world’s biggest manufacturers of premium cars, safety and efficiency are paramount on Mercedes-Benz’s production lines.<br>
+		  •However, optimizing the speed of their testing system for many possible feature combinations is complex and time-consuming without a powerful algorithmic approach.<br>
+		  •I have to reduce the time that cars spend on the test bench. 
+		  •Others will work with a dataset representing different permutations of features in a Mercedes-Benz car to predict the time it takes to pass testing. <br>
+		  •Optimal algorithms will contribute to faster testing, resulting in lower carbon dioxide emissions without reducing Mercedes-Benz’s standards.</p><br>
+		  <h4>Following actions I performed during analysis task:</h4><br>
+		  <p style="text-align:center">
+		  •Checking if any column(s),the variance is equal to zero and then removing those variable(s).<br>
+		  •Check for null and unique values for test and train sets.<br>
+		  •Apply label encoder.<br>
+		  •Perform dimensionality reduction was used to convert the 376 variables into 12 using n_components.<br>
+		  •XGBoost was used for prediction model.</p><br>
+		  <h4>To Know More about the code:</h4><br>
+		  <p>Please click here:<a href="https://github.com/taariqdb/simplilearn-notes/blob/main/ML%20Task%201.pdf">&nbsp;<b>Code</b></a></p><br>
+		  <hr>
+		  <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+		  </div>
+		</header>
+	</div>
+  <body>
+  <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+  </script>
+  </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>Walmart</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="walmart.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="wal">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">Walmart Retail Analysis</h1>
+          <h3>DESCRIPTION</h3>
+          <br>
+	      <p>
+		   • One of the leading retail stores in the US, Walmart, would like to predict the sales and demand accurately.<br>
+		   • There are certain events and holidays which impact sales on each day. There are sales data available for 45 stores of Walmart.<br>
+		   • The business is facing a challenge due to unforeseen demands and runs out of stock sometimes, due to the inappropriate machine learning algorithm.<br>
+		   • The organization would like to identify the factors which influence the attrition of employees.<br>
+		   • An ideal ML algorithm will predict demand accurately and ingest factors like economic conditions including CPI, Unemployment Index, etc.<br>
+		   • Walmart runs several promotional markdown events throughout the year.<br> 
+		   • These markdowns precede prominent holidays, the four largest of all, which are the Super Bowl, Labour Day, Thanksgiving, and Christmas.<br>
+		   • The weeks including these holidays are weighted five times higher in the evaluation than non-holiday weeks.<br>
+		   • Part of the challenge presented by this competition is modeling the effects of markdowns on these holiday weeks in the absence of complete/ideal historical data.<br> 
+		   • Historical sales data for 45 Walmart stores located in different regions are available.<br>
+		   </p>
+		   <br>
+		   <h3>Dataset Description:</h3>
+		   <p>This is the historical data that covers sales from 2010-02-05 to 2012-11-01, in the file Walmart_Store_sales. Within this file you will find the following fields:</p><br>
+		   <p style="text-align:center">
+		             1.	Store - the store number<br>
+                     2.	Date - the week of sales<br>
+                     3.	Weekly_Sales -  sales for the given store<br>
+                     4.	Holiday_Flag - whether the week is a special holiday week 1 – Holiday week 0 – Non-holiday week<br>
+                     5.	Temperature - Temperature on the day of sale<br>
+                     6.	Fuel_Price - Cost of fuel in the region<br>
+                     7.	CPI – Prevailing consumer price index<br>
+                     8.	Unemployment - Prevailing unemployment rate<br>
+
+		   </p>	
+           <h3>Analysis Task:</h3><p>
+           <b>Basic Statistics tasks:</b><br>		   
+		   1.Finding out which store has maximum sales</p>
+		   <br>
+		   <div class="BD">
+		    <img src="Walmart/StoreSales.png">
+			<p><b>Maximum store sales</b></p>
+		   </div>
+		   <br>
+		   <p>By seeing the chart we can able to understand that store 20 has maximum sales.</p><br>
+		   <p>2.Which store has maximum standard deviation i.e., the sales vary a lot. Also, find out the coefficient of mean to standard deviation</p>
+           <br>
+		   <div class="BD">
+		    <img src="Walmart/COV.png">
+		   </div>
+		   <br>
+		   <p><b>Groupby Charts:</b></p>
+		   <br>
+		   <div class="grid">
+		    <div class="item">
+			  <img src="Walmart/20storesgroupby.png">
+			  <p><b>20 stores Groupby</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/14storesgroupby.png">
+			  <p><b>14 stores Groupby</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/30storesgroupby.png">
+			  <p><b>35 stores Groupby</b></p>
+			</div>
+		   </div>
+		   <br>
+		   <p><b>Boxplots Analysis:</b></p>
+		   <br>
+		   <div class="grid">
+		    <div class="item">
+			  <img src="Walmart/20storesboxplot.png">
+			  <p><b>20 stores boxplot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/14storesboxplot.png">
+			  <p><b>14 stores boxplot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/35storesboxplot.png">
+			  <p><b>35 stores boxplot</b></p>
+			</div>
+		   </div>
+		   <br>
+		   <p><b>3.Finding which stores has good quarterly growth rate in Q3’2012</b></p>
+		   <br>
+		   <div class="BD">
+		    <img src="Walmart/Q3growth_rate.png">
+			<p><b>Third Quarter Growth Rates of Stores</b></P>
+		   </div>
+		   <br>
+		   <p><b>4.Some holidays have a negative impact on sales. Find out holidays which have higher sales than the mean sales in non-holiday season for all stores together</b></p>
+		   <h4>Holiday Events:</h4><p style="text-align:center">		   
+		   • Super Bowl: 12-Feb-10, 11-Feb-11, 10-Feb-12, 8-Feb-13<br>
+           • Labour Day: 10-Sep-10, 9-Sep-11, 7-Sep-12, 6-Sep-13<br>
+           • Thanksgiving: 26-Nov-10, 25-Nov-11, 23-Nov-12, 29-Nov-13<br>
+           • Christmas: 31-Dec-10, 30-Dec-11, 28-Dec-12, 27-Dec-13<br>
+           </p>
+		   <br>
+		   <div class="BD">
+		    <img src="Walmart/Holiday.png">
+		   </div>
+		   <br>
+		   <p><b>5.Provide a monthly and semester view of sales in units and give insights</b></p>
+		   <br>
+		   <div class="BD">
+			 <img src="Walmart/MonthSales.png">
+			 <p><b>Month Wise Sales</b></p>
+		   </div>
+		   <br>
+		   <div class="BD">
+			 <img src="Walmart/Semstersales.png">
+			 <p><b>Semster Wise Sales</b></p>
+		   </div>
+		   <br>
+		   <p><b>Statistical Model:</b></p><br>
+		   <p><b>For Store 1 – Build  prediction models to forecast demand</b></p><br>
+		   <p><b>1.Build prediction models to forecast demand Linear Regression – Utilize variables like date and restructure dates as 1 for 5 Feb 2010 (starting from the earliest date in order). Hypothesize if CPI,
+                   unemployment, and fuel price have any impact on sales</b></p>
+		    <br>
+			<div class="BD">
+			 <img src="Walmart/CM.png">
+			 <p><b>Correlation Matrix</b></p>
+			</div>
+			<br>
+			<p><b>LM Plots:</b></p>
+			<div class="BD">
+			 <img src="Walmart/Unemployment.png">
+			 <p><b>Unemployment LM Plot with Fuel Price</b></p>
+			</div>
+			<br>
+			<div class="BD">
+			 <img src="Walmart/CPI.png">
+			 <p><b>Unemployment LM Plot with CPI</b></p>
+			</div>
+			<br>
+			<p><b>Hypothesize with CPI:<b></p>
+			<br>
+			<div class="grid">
+		    <div class="item">
+			  <img src="Walmart/Den_CPI.png">
+			  <p><b>Density Plot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/Weeklysales_CPI.png">
+			  <p><b>Scatterplot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/Weeklysales_CPI2.png">
+			  <p><b>Lineplot</b></p>
+			</div>
+		   </div>
+		   <br>
+		   <p><b>Hypothesize with Fuel Price:<b></p>
+		   <br>
+		   <div class="grid">
+		    <div class="item">
+			  <img src="Walmart/Den_Fuel.png">
+			  <p><b>Density Plot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/Weeklysales_Fuel.png">
+			  <p><b>Scatterplot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/Weeklysales_Fuel2.png">
+			  <p><b>Lineplot</b></p>
+			</div>
+		   </div>
+		   <br>
+		   <p><b>Hypothesize with Unemployment:<b></p>
+		   <br>
+		   <div class="grid">
+		    <div class="item">
+			  <img src="Walmart/Den_Unemploy.png">
+			  <p><b>Density Plot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/Weeklysales_Unemploy.png">
+			  <p><b>Scatterplot</b></p>
+			</div>
+			<div class="item">
+			  <img src="Walmart/Weeklysales_Unemploy2.png">
+			  <p><b>Lineplot</b></p>
+			</div>
+		   </div>
+		   <br>
+		   <p><b>Change dates into days by creating new variable</b></p>
+		   <div class="BD">
+		    <img src="Walmart/Day1sales.png">
+			<p><b>Plotting the Weekly_sales for store 1 (Day wise)</b></p>
+		   </div>
+		   <br>
+		   <hr>
+           <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+           </div>
+		</header>
+	 </div>
+   </body>
+   <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+   </script>
+</html>

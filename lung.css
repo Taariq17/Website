@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: .2s linear;
+}
+body{
+    font-family:"Trirong", serif;
+    height: auto;
+    background-color: black;
+    color:white;
+}
+
+hr{
+   border-width: 1px;
+}
+
+
+#lung .BD{
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  color:black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:35em;
+  background: white;
+}
+#lung .BD img{
+  width: 500px;
+  height:500px;
+}
+
+
+.navbar{
+    position: fixed;
+    padding: 23px;
+    display: flex;
+    background-color:rgb(0,0,0);
+    justify-content: space-between;
+    aligin-items: center;
+    height: 9vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar a{
+    color:white;
+    font-weight: bold;
+}
+
+
+.navbar .logo{
+    font-size:1.5em;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+   margin:0 25px;
+}
+
+.navbar .nav-links ul li.active a:hover{
+   color: rgb(128,128,128);
+   font-weight: 600;
+}
+
+.navbar .menu-hamburger{
+   display:none;
+   position: absolute;
+   top: 50px;
+   right: 30px;
+   width: 35px;
+}
+
+
+.mobile-menu{
+   margin-left: 0;
+}
+
+
+
+#contact header{
+    height: 100%;
+    width:  100%;
+    background-color: black;
+}
+
+#contact h1{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 15px;
+  text-shadow: 0 15px 10px rgba(255,255,255,0.2);
+}
+#contact hr{
+  max-width: 50px;
+  border-color:white;
+  border-width: 1.5px;
+  margin-left: 718px;
+  margin-top: -1em;
+}
+#contact .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .logo-container img {
+    height:70px;
+    width: 70px;
+    margin: 10px; /* Add some spacing between the logos */
+}
+
+#contact .logo-container a {
+    text-decoration: none; /* Remove default underline from links */
+    display: inline-block; /* Make the link a block-level element */
+    position: relative; /* Position for pseudo-element */
+}
+
+#contact .logo-container a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; /* You can adjust the thickness of the underline */
+    bottom: 0;
+    left: 0;
+    background-color: white; /* Change this to your desired underline color */
+    transform: scaleX(0); /* Initially, the underline is not visible */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Add a smooth transition for the hover effect */
+}
+
+#contact .logo-container a:hover::before {
+    transform: scaleX(1); /* On hover, expand the underline to cover the link */
+}
+
+@media only screen and (max-width: 900px){
+     .navbar{
+        padding: 0;
+        width:100vw;
+ }
+    .navbar .logo{
+        position: fixed;
+        font-size:15px;
+	top: 15px;
+	left: 10px;
+ } 
+    .navbar .menu-hamburger{
+        top:15px;
+        right:10px;
+        display:block;
+        
+ }
+ 
+ #lung h1{
+  font-size:18px;
+ }
+
+ #lung h3{
+  font-size:14px;
+ }
+ #lung p{
+  font-size:10px;
+}
+ 
+#lung .BD{
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  color:black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:17em;
+  background: white;
+
+} 
+
+#lung .BD img{
+   width:200px;
+   height:200px;
+}
+
+
+
+
+ #contact header{
+       font-size: 15px;
+       text-align:center;
+       color:white;
+ }
+    #contact h1{
+       height:7.5vh;
+ }
+
+     #contact .logo-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+
+     #contact .logo-container img {
+       height:50px;
+       width: 50px;
+       margin: 10px; /* Add some spacing between the logos */
+}
+
+     #contact .logo-container a {
+       text-decoration: none; /* Remove default underline from links */
+       display: inline-block; /* Make the link a block-level element */
+       position: relative; /* Position for pseudo-element */
+}
+
+     #contact .logo-container a::before {
+       content: "";
+       position: absolute;
+       width: 100%;
+       height: 2px; /* You can adjust the thickness of the underline */
+       bottom: 0;
+       left: 0;
+       background-color: white; /* Change this to your desired underline color */
+       transform: scaleX(0); /* Initially, the underline is not visible */
+       transform-origin: bottom right;
+       transition: transform 0.3s ease; /* Add a smooth transition for the hover effect */
+}
+
+     #contact .logo-container a:hover::before {
+       transform: scaleX(1); /* On hover, expand the underline to cover the link */
+}
+
+
+     .nav-links{
+        
+	top:0;
+	left:0;
+        z-index:0;
+ 	position: absolute;
+	background-color:rgb(0,0,0);
+	backdrop-filter: blur(4px);
+	width: 100%;
+	height: 40vh;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+ 	margin-left: -100%;
+	transition: all 0.2s ease;
+ }
+     .nav-links.mobile-menu{
+        margin-left:0;
+ }   
+
+     .nav-links ul {
+        display:flex;
+        flex-direction: column;
+	align-items: center;
+ }
+     .navbar .nav-links ul li{
+	margin: 3px 0;
+	font-size:1.2em;
+	font-weight:bold;
+ }
+   
+     
+}

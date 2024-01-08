@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>LungDiseaseDetection</title>
+     <link href="https://fonts.googleapis.com/css?family=Trirong" rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet'>
+     <link rel="stylesheet" href="lung.css">
+  </head>
+  <body>
+     <nav class="navbar">
+	   <a href="#" class="logo">TAARIQ DAWOOD BUHARI</a>
+	   <div class="nav-links">
+	       <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+		    <li class="active"><a href="proj.html">Project</a></li>
+	       </ul>
+	   </div>
+	   <img src="img/btn2.png" alt="menu hamburger" class="menu-hamburger">
+      </nav>
+     <div id="lung">
+        <header>
+          <br>
+          <br>
+          <br>
+          <h1 style="text-align:center">Detection of Lung Infection</h1>
+          <h3>DESCRIPTION :</h3>
+          <br>
+		  <p>
+		  •Artificial Intelligence has evolved a lot and is currently able to solve problems that are very complex and require human specialization.<br>
+		  •One such area is healthcare. A lot of research happens every day to use deep learning for the betterment of humanity, and one such is healthcare.</p><br>
+		  <h3>Objective:</h3><br>
+		  <p>
+		  •To build a model using a convolutional neural network that can classify lung infection in a person using medical imagery.</p><br>
+		  <h3>Dataset Description:</h3><br>
+		  <p>
+		  •The dataset contains three different classes, including healthy, type 1 disease, and type 2 disease.</p><br>
+		  <h3>Following operations should be performed during model development:</h3><br>
+		  <p>
+		  •Import the necessary libraries like Keras and Tensorflow<br>
+		  •Plot the sample images for all the classes</p><br>
+		  <div class="BD">
+		    <img src="Lung/disease.png">
+		  </div><br>
+		  <p>
+		  •Build a data augmentation for train data to create new data with translation, rescale and flip, and rotation transformations. Rescale the image at 48x48.<br>
+		  •Build a data augmentation for test data to create new data and rescale the image at 48x48.<br>
+		  •Read images directly from the train folder and test folder using the appropriate function.<br>
+		  •Sequential model accuracy is 93% and F1 score for healthy dataset is 92%, Type 1 disease is 96% and Type 2 disease is 93%.</p><br>
+		  <div class="BD">
+		    <img src="Lung/TrainingandValidationAccOrLoss.png">
+			<p><b>Training and Validation Accuracy and Loss</b></p>
+		  </div><br>
+		  <div class="BD">
+		    <img src="Lung/CM.png">
+			<p><b>Confusion Matrix</b></p>
+		  </div><br>
+		  <h3>Sequential Model Output:</h3><br>
+		  <div class="BD">
+		    <img src="Lung/PredictedOP.png">
+			<p><b>Sequential Output</b></p>
+		  </div><br>
+		  <p>
+		  •Transfer learning using DenseNet121 model:</p><br>
+		  <p style="text-align:center">
+		  •Prepare data for the pre-trained mobile net model, with color mode as RGB<br>
+		  •Create an instance of a mobile net pre-trained model <br>
+		  •Add dense layer, dropout layer, batch normalization layer on the pre-trained model<br>
+		  •Create a final output layer with a SoftMax activation function<br>
+		  •Change the batch size activation function and optimize as rmsprop and observe if the accuracy increases<br>
+		  •Take the loss function as categorical cross-entropy<br>
+		  •Use early stopping with the patience of two epoch and call back function for preventing overfitting<br>
+		  •Try with ten numbers epoch<br>
+		  •Train the model using a generator and test the accuracy of the test data at every epoch<br>
+		  •DenseNet121 accuracy is 81% and F1 score for healthy dataset is 67%, Type 1 disease is 96% and Type 2 disease is 75%.</p><br>
+          <div class = "BD">
+		    <img src="Lung/TrainAndValidDense121.png">
+			<p><b>Training and Validation Accuracy</b></p>
+		  </div><br>
+		  <div class="BD">
+		    <img src="Lung/TrainAndValidDense121Loss.png">
+			<p><b>Training and Validation Loss</b></p>
+		  </div><br>
+		  <div class="BD">
+		    <img src="Lung/Dense121netCM.png">
+			<p><b>Confusion Matrix</b></p>
+		  </div><br>
+		  <h3>DenseNet121 Model Output:</h3><br>
+		  <div class="BD">
+		    <img src="Lung/Dense121OP.png">
+			<p><b>DenseNet121 Output</b></p>
+		  </div>
+		  <br>
+		  <p>
+		  •Transfer Learning using Mobile Net:</p><br>
+		  <p style="text-align:center">
+		  •Prepare the dataset for the transfer learning algorithm using Densenet121 with the image size as 224x224x3<br>
+		  •Freeze the top layers of the pre-trained model<br>
+		  •Add a dense layer at the end of the pre-trained model followed by a dropout layer and try various combinations to get an accuracy<br>
+		  •Add the final output layer with a SoftMax activation function<br>
+		  •Take loss function as categorical cross-entropy<br>
+		  •Take Adam as an optimizer<br>
+		  •Use early stopping to prevent overfitting<br>
+		  •Try with 15 number of epoch and batch size with seven, also try various values to see the impact on results<br>
+		  •Train the model using the generator and test the accuracy of the test data at every epoch <br>
+		  •Mobile Net model accuracy is 89% and F1 score is healthy dataset is 86%, Type 1 disease is 96% and Type 2 disease is 84%.</p><br>
+		  <div class="BD">
+		    <img src="Lung/TrainAndValidMobile.png">
+			<p><b>Training and Validation Accuracy</b></p>
+		  </div><br>
+		  <div class="BD">
+		    <img src="Lung/TrainAndValidMobilLoss.png">
+			<p><b>Training and Validation Loss</b></p>
+		  </div><br>
+		  <div class="BD">
+		    <img src="Lung/MobilCM.png">
+			<p><b>Confusion Matrix</b></p>
+		  </div><br>
+		  <h3>Mobile Net Model Output:</h3><br>
+		  <div class="BD">
+		    <img src="Lung/MobilOP.png">
+			<p><b>Mobile Net Output</b></p>
+		  </div><br>
+		  <p>
+		  •Compare to all three model Sequential model accuracy was better.</p><br>
+		  <hr>
+		  <div id="contact">
+             <header>
+              <h1>Get in Touch</h1>
+              <div class="logo-container">
+                <a href="https://www.linkedin.com/in/taariq-dawood-buhari-39333217b/"><img src="contact/linkedin.png" alt="Logo 1"></a>
+                <a href="https://github.com/taariqdb"><img src="contact/github.jpg" alt="Logo 2"></a>
+                <a href="mailto:taariqdb17@gmail.com"><img src="contact/email.png" alt="Logo 3"></a>
+              </div>
+             </header>
+		  </div>
+		</header>
+	 </div>
+  </body>
+  <script>
+       const menuHamburger = document.querySelector(".menu-hamburger")
+       const navLinks = document.querySelector(".nav-links")
+       
+       menuHamburger.addEventListener('click',()=>{
+       navLinks.classList.toggle('mobile-menu')
+       });
+  </script>
+</html>
